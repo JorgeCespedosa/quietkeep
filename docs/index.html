@@ -1,0 +1,319 @@
+TEST123<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacidad de Quietkeep</title>
+<meta name="description" content="Política de privacidad de Quietkeep: la aplicación no recopila datos, no tiene servidores y guarda todo cifrado en tu propio ordenador.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='4' y='4' width='56' height='56' rx='13' fill='%231a3b34'/%3E%3Cpath d='M16 46V24h4v-5h4v5h4v-7h4v7h4v-5h4v5h4v22H16Z' fill='%23fff'/%3E%3Crect x='27' y='34' width='10' height='12' fill='%231a3b34'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f7f8f6;
+    --surface: #ffffff;
+    --text: #1c2422;
+    --muted: #5b6b66;
+    --faint: #8a9994;
+    --border: #e1e6e2;
+    --accent: #2f6e58;
+    --accent-soft: #e7f0ec;
+    --accent-dark: #1a3b34;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #111714;
+      --surface: #171f1b;
+      --text: #eaf0ec;
+      --muted: #9bafa8;
+      --faint: #6c8079;
+      --border: #26332d;
+      --accent: #62c39d;
+      --accent-soft: #1c2e27;
+      --accent-dark: #a8e6cb;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Work Sans", system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    margin: 0;
+    padding-inline: 20px;
+    padding-block: 56px 80px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img { max-width: 100%; }
+
+  .page {
+    max-width: 660px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .keep-mark {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .eyebrow span {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12.5px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  h1 {
+    font-family: "Fraunces", Georgia, serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: clamp(1.7rem, 4vw, 2.35rem);
+    line-height: 1.18;
+    text-wrap: balance;
+    margin: 0;
+    color: var(--text);
+  }
+
+  .dek {
+    font-size: 1.05rem;
+    color: var(--muted);
+    max-width: 52ch;
+    margin: 0;
+  }
+
+  .summary {
+    background: var(--accent-soft);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px 24px;
+    display: flex;
+    gap: 16px;
+  }
+
+  .summary-glyph {
+    font-family: "Fraunces", serif;
+    font-size: 1.6rem;
+    color: var(--accent);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .summary p {
+    margin: 0;
+    color: var(--text);
+    font-size: 0.98rem;
+  }
+
+  .summary strong {
+    color: var(--accent-dark);
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-block-start: 28px;
+    border-top: 1px solid var(--border);
+  }
+
+  section:first-child {
+    border-top: none;
+    padding-block-start: 0;
+  }
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  .section-num {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12.5px;
+    color: var(--faint);
+  }
+
+  h2 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 500;
+    font-size: 1.15rem;
+    margin: 0;
+    color: var(--text);
+  }
+
+  section p, section li {
+    color: var(--muted);
+    font-size: 0.98rem;
+    max-width: 62ch;
+  }
+
+  section p { margin: 0; }
+
+  section ul {
+    margin: 4px 0 0;
+    padding-left: 1.1em;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  section li::marker {
+    color: var(--accent);
+  }
+
+  .lead { color: var(--text); }
+
+  code {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.88em;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 0.1em 0.4em;
+    border-radius: 5px;
+    color: var(--text);
+  }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding-block-start: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  footer p {
+    margin: 0;
+    color: var(--faint);
+    font-size: 0.86rem;
+  }
+
+  footer a {
+    color: var(--accent-dark);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+  }
+
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  @media (max-width: 480px) {
+    .summary { flex-direction: column; gap: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <header>
+    <div class="eyebrow">
+      <svg class="keep-mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect x="4" y="4" width="56" height="56" rx="13" fill="var(--accent-dark)"/>
+        <path d="M16 46V24h4v-5h4v5h4v-7h4v7h4v-5h4v5h4v22H16Z" fill="var(--surface)"/>
+        <rect x="27" y="34" width="10" height="12" fill="var(--accent-dark)"/>
+      </svg>
+      <span>Quietkeep · Política de privacidad</span>
+    </div>
+    <h1>Lo que escribes se queda donde lo escribes.</h1>
+    <p class="dek">Esta página explica, sin letra pequeña, qué pasa con tus notas, tus eventos y tus tareas cuando usas Quietkeep.</p>
+  </header>
+
+  <div class="summary">
+    <div class="summary-glyph">”</div>
+    <p><strong>En una frase:</strong> Quietkeep no tiene servidores, no tiene cuentas y no manda nada a ningún sitio — todo lo que escribes se guarda cifrado en tu propio ordenador, punto.</p>
+  </div>
+
+  <main>
+    <section>
+      <div class="section-head">
+        <span class="section-num">01</span>
+        <h2>Qué datos recopilamos</h2>
+      </div>
+      <p>Ninguno. Quietkeep no tiene un servidor al que conectarse: no hay analíticas de uso, no hay informes de errores automáticos, no hay identificadores de publicidad y no se crea ninguna cuenta de usuario. La aplicación funciona completamente sin conexión a internet.</p>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <span class="section-num">02</span>
+        <h2>Dónde viven tus notas</h2>
+      </div>
+      <p>Tus notas, eventos y tareas se guardan en un único archivo (<code>notas-app.sqlite</code>) dentro de la carpeta de datos de la aplicación en tu propio Windows. Ese archivo, y las copias de seguridad automáticas que se generan al abrir la app, están cifrados con AES-256-GCM. La clave de cifrado se protege a su vez con el almacén de credenciales de tu cuenta de Windows (DPAPI) — nadie más que tu sesión de Windows puede descifrarla.</p>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <span class="section-num">03</span>
+        <h2>Copias de seguridad manuales</h2>
+      </div>
+      <p>Si usas "Copia de seguridad…" para exportar tus datos a un archivo <code>.json</code> (por ejemplo, a un USB o a una carpeta en la nube), ese archivo concreto se guarda <strong class="lead">sin cifrar</strong> a propósito, porque su función es poder llevarlo a otro equipo, donde la clave de este Windows no serviría de nada. Trátalo con el mismo cuidado que le darías a un cuaderno con tus notas.</p>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <span class="section-num">04</span>
+        <h2>Permisos que pide la app</h2>
+      </div>
+      <ul>
+        <li><strong class="lead">Notificaciones de escritorio</strong>, solo para avisarte de los recordatorios de calendario que tú mismo has creado. Se generan y muestran en tu equipo; no pasan por ningún servidor.</li>
+        <li><strong class="lead">Inicio automático con Windows</strong> (opcional, lo activas tú desde el propio menú de la app) para que los recordatorios funcionen aunque no hayas abierto Quietkeep a mano.</li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <span class="section-num">05</span>
+        <h2>Terceros</h2>
+      </div>
+      <p>No hay ningún SDK de terceros integrado en Quietkeep: sin publicidad, sin rastreadores, sin bibliotecas de analítica. El código de la aplicación es Angular y Electron corriendo enteramente en tu máquina.</p>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <span class="section-num">06</span>
+        <h2>Cambios en esta política</h2>
+      </div>
+      <p>Si esta política cambia alguna vez, se actualizará esta misma página con una nueva fecha de vigencia. Al ser una app sin cuentas ni conexión, no hay forma de avisarte por otro medio salvo aquí.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Vigente desde el 14 de septiembre de 2026.</p>
+    <p>Contacto: <a href="mailto:jorgegilvaz@gmail.com">jorgegilvaz@gmail.com</a></p>
+  </footer>
+</div>
+
+</body>
+</html>
