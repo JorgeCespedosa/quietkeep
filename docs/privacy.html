@@ -1,0 +1,71 @@
+<div style="max-width:720px;margin:0 auto;padding:48px 24px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#1f2937;line-height:1.65;">
+  <div style="display:flex;align-items:center;gap:14px;margin-bottom:8px;">
+    <div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#1f423a,#346a5c);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:20px;">N</div>
+    <h1 style="margin:0;font-size:28px;">Notoo</h1>
+  </div>
+  <p style="color:#6b7280;margin-top:0;">Política de privacidad · Privacy policy</p>
+
+  <div style="display:flex;gap:8px;margin:24px 0;border-bottom:1px solid #e5e7eb;">
+    <button id="tab-es" onclick="showLang('es')" style="border:none;background:none;padding:10px 16px;font-size:15px;font-weight:600;cursor:pointer;border-bottom:2px solid #346a5c;color:#111827;">Español</button>
+    <button id="tab-en" onclick="showLang('en')" style="border:none;background:none;padding:10px 16px;font-size:15px;font-weight:600;cursor:pointer;border-bottom:2px solid transparent;color:#6b7280;">English</button>
+  </div>
+
+  <div id="lang-es">
+    <p><strong>Notoo no tiene servidores, no tiene cuentas y no manda nada a ningún sitio.</strong> Todo lo que escribes se queda en tu propio ordenador.</p>
+
+    <h3>1. No recogemos datos</h3>
+    <p>Notoo no tiene servidores propios, no requiere cuenta ni inicio de sesión, y no envía ninguna información a Internet. La aplicación funciona completamente sin conexión.</p>
+
+    <h3>2. Cómo se guardan tus notas</h3>
+    <p>Tus notas, tareas y eventos de calendario se guardan en un archivo SQLite cifrado con AES-256-GCM en tu propio equipo, ligado a tu cuenta de Windows. No hace falta recordar ninguna contraseña adicional.</p>
+
+    <h3>3. Copias de seguridad</h3>
+    <p>Puedes exportar copias de seguridad manuales en formato JSON. Estos archivos exportados se guardan sin cifrar de forma intencionada, para que puedas abrirlos, revisarlos o moverlos a otro equipo con libertad.</p>
+
+    <h3>4. Permisos que solicita la app</h3>
+    <p>Notoo solo pide permiso para mostrar notificaciones de escritorio (recordatorios de calendario) y, opcionalmente, para iniciarse junto con Windows. No solicita acceso a la cámara, micrófono, ubicación ni contactos.</p>
+
+    <h3>5. Sin rastreadores ni terceros</h3>
+    <p>No se integra ningún SDK de terceros, analítica, publicidad ni sistema de rastreo de ningún tipo.</p>
+
+    <h3>6. Contacto</h3>
+    <p>Si tienes cualquier duda sobre esta política, escríbeme a <a href="mailto:jorgegilvaz@gmail.com" style="color:#346a5c;">jorgegilvaz@gmail.com</a>.</p>
+  </div>
+
+  <div id="lang-en" style="display:none;">
+    <p><strong>Notoo has no servers, no accounts, and sends nothing anywhere.</strong> Everything you write stays on your own computer.</p>
+
+    <h3>1. We don't collect data</h3>
+    <p>Notoo has no servers of its own, requires no account or sign-in, and sends no information over the Internet. The app works entirely offline.</p>
+
+    <h3>2. How your notes are stored</h3>
+    <p>Your notes, tasks and calendar events are stored in a local SQLite file encrypted with AES-256-GCM on your own machine, tied to your Windows account. There's no separate password to remember.</p>
+
+    <h3>3. Backups</h3>
+    <p>You can export manual backups in JSON format. These exported files are intentionally left unencrypted, so you can open, review, or move them to another machine freely.</p>
+
+    <h3>4. Permissions the app requests</h3>
+    <p>Notoo only asks for permission to show desktop notifications (calendar reminders) and, optionally, to start up together with Windows. It does not request access to your camera, microphone, location, or contacts.</p>
+
+    <h3>5. No trackers or third parties</h3>
+    <p>No third-party SDKs, analytics, advertising, or tracking of any kind are integrated.</p>
+
+    <h3>6. Contact</h3>
+    <p>If you have any questions about this policy, email me at <a href="mailto:jorgegilvaz@gmail.com" style="color:#346a5c;">jorgegilvaz@gmail.com</a>.</p>
+  </div>
+
+  <p style="color:#9ca3af;font-size:13px;margin-top:40px;">© 2026 Yorch Code · Última actualización / Last updated: September 2026</p>
+</div>
+
+<script>
+function showLang(lang) {
+  try {
+    document.getElementById('lang-es').style.display = lang === 'es' ? 'block' : 'none';
+    document.getElementById('lang-en').style.display = lang === 'en' ? 'block' : 'none';
+    document.getElementById('tab-es').style.borderBottomColor = lang === 'es' ? '#346a5c' : 'transparent';
+    document.getElementById('tab-es').style.color = lang === 'es' ? '#111827' : '#6b7280';
+    document.getElementById('tab-en').style.borderBottomColor = lang === 'en' ? '#346a5c' : 'transparent';
+    document.getElementById('tab-en').style.color = lang === 'en' ? '#111827' : '#6b7280';
+  } catch (e) {}
+}
+</script>
